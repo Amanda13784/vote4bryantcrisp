@@ -1,6 +1,7 @@
 //componets/Layout.js
 import Header from "./Header";
 import Footer from "./Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Layout({ children }) {
     return (
@@ -8,6 +9,7 @@ export default function Layout({ children }) {
             <Header />
             <main className="flex-grow">{children}</main>
             <Footer />
-            </div>
+            <Analytics />
+        </div>
     )
 }
