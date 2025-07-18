@@ -69,13 +69,13 @@ export default function Home() {
                     <h2 id="facebook-feed-heading" className="text-2xl sm:text-3xl font-traditional font-semibold text-center mb-8">Campaign Facebook Feed</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-start">
                         {/* Facebook Feed Left */}
-                        <div className="flex justify-center md:justify-start overflow-x-auto">
-                            <div className="min-w-[500px]">
+                        <div className="flex justify-center md:justify-start">
+                            <div className="w-full max-w-[500px]">
                                 <iframe
                                     src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FBryant-Crisp-for-Gibsonville-Mayor-61578349430825%2F&tabs=timeline%2C%20events&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                                    width="500"
+                                    width="100%"
                                     height="600"
-                                    style={{ border: 'none', overflow: 'hidden', display: 'block' }}
+                                    style={{ border: 'none', overflow: 'hidden', display: 'block', width: '100%' }}
                                     scrolling="no"
                                     frameBorder="0"
                                     allowFullScreen={true}

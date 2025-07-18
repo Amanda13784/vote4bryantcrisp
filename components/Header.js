@@ -12,8 +12,8 @@ export default function Header() {
                     <Link href="/about" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">About</Link>
                     <Link href="/issues" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Issues</Link>
                     <Link href="/contact" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Contact</Link>
-                    <Link href="/donate" className="bg-yellow-500 text-blue-900 px-4 sm:px-6 py-2 rounded-full text-base sm:text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block">Donate</Link>
-                    <Link href="/volunteer" className="bg-blue-700 text-white px-4 sm:px-6 py-2 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">Volunteer</Link>
+                    <Link href="/donate" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Donate</Link>
+                    <Link href="/volunteer" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Volunteer</Link>
                 </nav>
             </div>
         </header>
