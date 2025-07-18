@@ -24,4 +24,21 @@ The Volunteer page (`pages/volunteer.js`) currently uses a placeholder embedded 
 
 **To update the form:**
 1. Replace the `src` attribute in the `<iframe>` in `pages/volunteer.js` with Bryant's actual Google Form embed link.
-2. This will allow all volunteer responses to be collected in Bryant's Google account for easy access and management. 
+2. This will allow all volunteer responses to be collected in Bryant's Google account for easy access and management.
+
+## Donate Page Setup
+
+The Donate page (`pages/donate.js`) currently uses a placeholder link/button for ActBlue. When Bryant is ready, replace the `href` in the Donate button (or embed the ActBlue widget) with Bryant's actual ActBlue donation link or embed code.
+
+**To update the Donate page:**
+1. Replace the `href` attribute in the `<a>` tag in `pages/donate.js` with Bryant's real ActBlue donation link, or embed the ActBlue widget as needed.
+2. This will allow supporters to donate directly to Bryant's campaign via ActBlue. 
+
+## Facebook Feed Setup
+
+The homepage (`pages/index.js`) includes a placeholder Facebook Page Plugin iframe under the "Meet Bryant Crisp" section. For production, update the `src` attribute in the `<iframe>` with the real campaign Facebook page URL using the [Facebook Page Plugin Configurator](https://developers.facebook.com/docs/plugins/page-plugin/).
+
+**To update the Facebook Feed:**
+1. Go to the Facebook Page Plugin Configurator and enter the campaign's Facebook page URL.
+2. Copy the generated iframe code and replace the `src` in `pages/index.js`.
+3. This will display the live campaign Facebook feed on the homepage. 

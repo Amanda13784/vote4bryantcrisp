@@ -115,6 +115,18 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      {/* Call to Action Section */}
+      <section id="cta" className="py-12 sm:py-16 bg-blue-900 text-white text-center" aria-labelledby="cta-heading">
+        <div className="container mx-auto px-4">
+          <h2 id="cta-heading" className="text-2xl sm:text-3xl font-traditional font-semibold mb-4">Ready to Make a Difference?</h2>
+          <p className="text-base sm:text-lg mb-6 font-political">Stand with Bryant to build a stronger Gibsonville.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="/contact" className="bg-white text-blue-900 px-6 py-3 rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-200 transition-colors inline-block">Contact Us</a>
+            <a href="/donate" className="bg-yellow-500 text-blue-900 px-6 py-3 rounded-lg text-base sm:text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block">Donate</a>
+            <a href="/volunteer" className="bg-blue-700 text-white px-6 py-3 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">Volunteer</a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

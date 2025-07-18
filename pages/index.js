@@ -25,8 +25,8 @@ export default function Home() {
                     </div>
                     <p className="text-base sm:text-lg md:text-2xl mb-6 max-w-2xl mx-auto font-political">Leadership. Integrity. Progress.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="#about" className="bg-white text-blue-900 px-6 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-100 transition-colors inline-block" aria-label="Learn more about Bryant Crisp">Learn More</a>
                         <a href="/donate" className="bg-yellow-500 text-blue-900 px-6 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block" aria-label="Donate to Bryant Crisp's campaign">Donate</a>
+                        <a href="/volunteer" className="bg-blue-700 text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-600 transition-colors inline-block" aria-label="Volunteer for Bryant Crisp's campaign">Volunteer</a>
                     </div>
                 </div>
             </section>
@@ -58,6 +58,51 @@ export default function Home() {
                                     className="rounded-lg shadow-lg"
                                 />
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Facebook Feed Section */}
+            <section id="facebook-feed" className="py-12 sm:py-16 md:py-20 bg-white text-gray-800" aria-labelledby="facebook-feed-heading">
+                <div className="container mx-auto px-4">
+                    <h2 id="facebook-feed-heading" className="text-2xl sm:text-3xl font-traditional font-semibold text-center mb-8">Campaign Facebook Feed</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-start">
+                        {/* Facebook Feed Left */}
+                        <div className="flex justify-center md:justify-start overflow-x-auto">
+                            <div className="min-w-[500px]">
+                                <iframe
+                                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FBryant-Crisp-for-Gibsonville-Mayor-61578349430825%2F&tabs=timeline%2C%20events&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                                    width="500"
+                                    height="600"
+                                    style={{ border: 'none', overflow: 'hidden', display: 'block' }}
+                                    scrolling="no"
+                                    frameBorder="0"
+                                    allowFullScreen={true}
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                    title="Facebook Feed"
+                                ></iframe>
+                            </div>
+                        </div>
+                        {/* Right Side: Quote, Image, and CTA */}
+                        <div className="flex flex-col justify-center items-center text-center md:text-left md:items-start space-y-4 mt-8 md:mt-0">
+                            <blockquote className="font-political italic text-lg text-blue-900 border-l-4 border-blue-900 pl-4">
+                                "Stay connected with the campaign and see the latest updates, events, and community highlights on our Facebook page!"
+                            </blockquote>
+                            <Image
+                                src="/images/BCBullhorn.png"
+                                alt="Campaign Bullhorn Logo"
+                                width={500}
+                                height={600}
+                            />
+                            <a
+                                href="https://www.facebook.com/p/Bryant-Crisp-for-Gibsonville-Mayor-61578349430825/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-800 transition-colors inline-block"
+                            >
+                                Follow on Facebook
+                            </a>
                         </div>
                     </div>
                 </div>

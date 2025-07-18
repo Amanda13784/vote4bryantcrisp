@@ -7,13 +7,13 @@ export default function Header() {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-traditional font-bold tracking-wide mb-2 sm:mb-0">
                     Vote <span className="text-yellow-400">Bryant Crisp</span>
                 </h1>
-                <nav className="flex gap-2 sm:gap-4 md:gap-6">
-                    <Link href="/" className="font-political px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Home</Link>
-                    <Link href="/about" className="font-political px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">About</Link>
-                    <Link href="/issues" className="font-political px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Issues</Link>
-                    <Link href="/contact" className="font-political px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Contact</Link>
-                    <Link href="/donate" className="bg-yellow-500 text-blue-900 px-6 py-2 rounded-full text-base sm:text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block">Donate</Link>
-                    <Link href="/volunteer" className="bg-blue-700 text-white px-6 py-2 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">Volunteer</Link>
+                <nav className="flex gap-2 sm:gap-4 md:gap-6 overflow-x-auto">
+                    <Link href="/" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Home</Link>
+                    <Link href="/about" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">About</Link>
+                    <Link href="/issues" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Issues</Link>
+                    <Link href="/contact" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Contact</Link>
+                    <Link href="/donate" className="bg-yellow-500 text-blue-900 px-4 sm:px-6 py-2 rounded-full text-base sm:text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block">Donate</Link>
+                    <Link href="/volunteer" className="bg-blue-700 text-white px-4 sm:px-6 py-2 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-600 transition-colors inline-block">Volunteer</Link>
                 </nav>
             </div>
         </header>
