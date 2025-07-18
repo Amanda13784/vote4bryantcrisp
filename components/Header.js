@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
     return (
         <header className="bg-blue-900/95 text-white shadow-md border-b-2 border-blue-800 sticky top-0 z-50">
-            <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center py-4">
+            <div className="container mx-auto px-2 sm:px-4 flex flex-col sm:flex-row justify-between items-center py-4">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-traditional font-bold tracking-wide mb-2 sm:mb-0">
                     Vote <span className="text-yellow-400">Bryant Crisp</span>
                 </h1>
