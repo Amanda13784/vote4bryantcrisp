@@ -42,16 +42,15 @@ export default function Home() {
                                 Bryant was born and raised in Burlington, NC. He is a proud graduate
                                 of Cummings High School. He later attended NC A&T State University
                                 where he studied psychology. Bryant has worked in the healthcare 
-                                field for the last 15 years. In addition to his career achievements
-                                Bryant is also a devoted single father to three sons ages 18, 11, 
-                                and 2. As well as a mentor in the community. He is well equipped 
-                                and ready to fight for the people of Gibsonville as your next 
-                                Alderman. 
+                                field for 15 years, and currently works as an Organizer and Political Consultant, 
+                                as well as a mentor in the community. Bryant is also a devoted father to four sons 
+                                and four daughters.  He is well equipped and ready to fight for the people of 
+                                Gibsonville as your next Mayor. 
                                 </p>
                             </div>
                             <div className="relative">
                                 <Image
-                                    src="/images/BCMain.png"
+                                    src="/images/BCProfile.jpg"
                                     alt="Bryant Crisp in Gibsonville"
                                     width={500}
                                     height={400}
@@ -90,8 +89,8 @@ export default function Home() {
                                 "Stay connected with the campaign and see the latest updates, events, and community highlights on our Facebook page!"
                             </blockquote>
                             <Image
-                                src="/images/BCBullhorn.png"
-                                alt="Campaign Bullhorn Logo"
+                                src="/images/BCWall.jpg"
+                                alt="Campaign Sit down Logo"
                                 width={500}
                                 height={600}
                             />
