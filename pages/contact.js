@@ -14,11 +14,14 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
+    
+    // Option 1: Server-side API (current implementation)
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
     });
+    
     if (res.ok) {
       setStatus('success');
       setForm({ name: '', email: '', message: '' });
@@ -26,6 +29,42 @@ export default function Contact() {
       setStatus('error');
     }
   };
+
+  // Option 2: EmailJS (client-side alternative)
+  // Uncomment this if you want to use EmailJS instead of server API
+  /*
+  const handleSubmitEmailJS = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    
+    try {
+      // Load EmailJS dynamically
+      const emailjs = await import('@emailjs/browser');
+      
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID', // EmailJS service ID
+        'YOUR_TEMPLATE_ID', // EmailJS template ID
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          to_email: 'bryant.crisp@gmail.com',
+        },
+        'YOUR_PUBLIC_KEY' // EmailJS public key
+      );
+      
+      if (result.status === 200) {
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setStatus('error');
+    }
+  };
+  */
 
   return (
     <main>

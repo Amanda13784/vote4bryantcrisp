@@ -23,7 +23,7 @@ export default function Home() {
                             <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif italic font-extralight">for Mayor</div>
                         </h1>
                     </div>
-                    <p className="text-base sm:text-lg md:text-2xl mb-6 max-w-2xl mx-auto font-political">Leadership. Integrity. Progress.</p>
+                    <p className="text-base sm:text-lg md:text-2xl mb-6 max-w-2xl mx-auto font-political">For the People. For Gibsonville.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <a href="/donate" className="bg-yellow-500 text-blue-900 px-6 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block" aria-label="Donate to Bryant Crisp's campaign">Donate</a>
                         <a href="/volunteer" className="bg-blue-700 text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-600 transition-colors inline-block" aria-label="Volunteer for Bryant Crisp's campaign">Volunteer</a>

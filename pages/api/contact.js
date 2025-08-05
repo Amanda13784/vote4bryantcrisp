@@ -1,6 +1,4 @@
 // pages/api/contact.js
-import nodemailer from 'nodemailer';
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
@@ -13,27 +11,44 @@ export default async function handler(req, res) {
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+    //Using Resend (recommended for Vercel)
+    const resendResponse = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
       },
+      body: JSON.stringify({
+        from: 'Bryant Crisp Campaign <onboarding@resend.dev>',
+        to: [process.env.CONTACT_TO_EMAIL || 'bryant.crisp@gmail.com'],
+        subject: `New Contact Form Submission from ${name}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #1e40af;">New Contact Form Submission</h2>
+            <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <p><strong>Name:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Message:</strong></p>
+              <div style="background-color: white; padding: 15px; border-radius: 4px; margin-top: 10px;">
+                ${message.replace(/\n/g, '<br/>')}
+              </div>
+            </div>
+            <p style="color: #6b7280; font-size: 14px;">
+              This message was sent from the Bryant Crisp for Gibsonville Mayor campaign website.
+            </p>
+          </div>
+        `,
+        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      }),
     });
 
-    await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.CONTACT_TO_EMAIL,
-      subject: `New Contact Form Submission from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-      html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>`
-    });
+    if (!resendResponse.ok) {
+      throw new Error(`Resend API error: ${resendResponse.status}`);
+    }
 
-    return res.status(200).json({ message: 'Email sent' });
+    return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
-    console.error(error);
+    console.error('Email sending error:', error);
     return res.status(500).json({ message: 'Error sending email' });
   }
 } 
