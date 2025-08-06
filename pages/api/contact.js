@@ -11,6 +11,13 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Debug: Check if API key exists
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not set');
+    }
+    
+    console.log('API Key exists:', process.env.RESEND_API_KEY.substring(0, 10) + '...');
+    
     //Using Resend (recommended for Vercel)
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -19,7 +26,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Bryant Crisp Campaign <onboarding@resend.dev>',
+        from: 'onboarding@resend.dev',
         to: [process.env.CONTACT_TO_EMAIL || 'voteforbryantcrisp@gmail.com'],
         subject: `New Contact Form Submission from ${name}`,
         html: `
