@@ -26,6 +26,8 @@ export default function Contact() {
       setStatus('success');
       setForm({ name: '', email: '', message: '' });
     } else {
+      const errorData = await res.json();
+      console.error('Contact form error:', errorData);
       setStatus('error');
     }
   };

@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: 'Bryant Crisp Campaign <onboarding@resend.dev>',
-        to: [process.env.CONTACT_TO_EMAIL || 'bryant.crisp@gmail.com'],
+        to: [process.env.CONTACT_TO_EMAIL || 'voteforbryantcrisp@gmail.com'],
         subject: `New Contact Form Submission from ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -49,6 +49,25 @@ export default async function handler(req, res) {
     return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Email sending error:', error);
-    return res.status(500).json({ message: 'Error sending email' });
+    
+    // More specific error messages for debugging
+    if (error.message.includes('Resend API error')) {
+      return res.status(500).json({ 
+        message: 'Email service error', 
+        details: error.message 
+      });
+    }
+    
+    if (!process.env.RESEND_API_KEY) {
+      return res.status(500).json({ 
+        message: 'Email service not configured', 
+        details: 'RESEND_API_KEY is missing' 
+      });
+    }
+    
+    return res.status(500).json({ 
+      message: 'Error sending email',
+      details: error.message 
+    });
   }
 } 
