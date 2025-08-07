@@ -1,11 +1,25 @@
 //pages/contact.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { HiOutlineMail } from 'react-icons/hi';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState(null);
+  const [emailjsLoaded, setEmailjsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Load EmailJS dynamically
+    const loadEmailJS = async () => {
+      try {
+        await import('@emailjs/browser');
+        setEmailjsLoaded(true);
+      } catch (error) {
+        console.error('Failed to load EmailJS:', error);
+      }
+    };
+    loadEmailJS();
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -15,19 +29,33 @@ export default function Contact() {
     e.preventDefault();
     setStatus('loading');
     
-    // Option 1: Server-side API (current implementation)
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    });
-    
-    if (res.ok) {
-      setStatus('success');
-      setForm({ name: '', email: '', message: '' });
-    } else {
-      const errorData = await res.json();
-      console.error('Contact form error:', errorData);
+    try {
+      if (!emailjsLoaded) {
+        throw new Error('EmailJS not loaded');
+      }
+
+      const emailjs = await import('@emailjs/browser');
+      
+      const result = await emailjs.send(
+        'service_j51wykg', // EmailJS service ID
+        'template_ijhxwpm', // EmailJS template ID
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          to_email: 'voteforbryantcrisp@gmail.com',
+        },
+        'JPyoRqO2Ok8CdEEvl' // EmailJS public key
+      );
+      
+      if (result.status === 200) {
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('EmailJS error:', error);
       setStatus('error');
     }
   };
