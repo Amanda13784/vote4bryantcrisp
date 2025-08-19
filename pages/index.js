@@ -70,17 +70,7 @@ export default function Home() {
                         {/* Facebook Feed Left - Made Bigger */}
                         <div className="flex justify-center lg:justify-start">
                             <div className="w-full max-w-[600px]">
-                                <iframe
-                                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FBryant-Crisp-for-Gibsonville-Mayor-61578349430825%2F&tabs=timeline%2C%20events&width=600&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                                    width="100%"
-                                    height="700"
-                                    style={{ border: 'none', overflow: 'hidden', display: 'block', width: '100%' }}
-                                    scrolling="no"
-                                    frameBorder="0"
-                                    allowFullScreen={true}
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                    title="Facebook Feed"
-                                ></iframe>
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61578349430825&tabs=timeline&width=340&height=900&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="340" height="900" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                             </div>
                         </div>
                         {/* Right Side: Quote, Image, and CTA */}
