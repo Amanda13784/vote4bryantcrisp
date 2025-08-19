@@ -90,13 +90,13 @@ export default function About() {
                         </div>
                         <div className="relative">
                             <Image
-                                src="/images/BCSitdown.png"
-                                alt="Bryant Crisp talking with voters."
+                                src="/images/BCColor.jpg"
+                                alt="Bryant Crisp standing next to a mural."
                                 width={500}
                                 height={400}
                                 className="rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                             />
-                            <p className="text-sm text-gray-600 mt-2 text-center italic">Bryant talking with members of the community.</p>
+                            <p className="text-sm text-gray-600 mt-2 text-center italic">Bryant standing next to a mural.</p>
                         </div>
                     </div>
                 </div>

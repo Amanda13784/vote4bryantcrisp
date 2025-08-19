@@ -34,10 +34,10 @@ export default function Issues() {
                     <h2 id="issues-heading" className="text-2xl sm:text-3xl font-traditional font-semibold text-center mb-8 sm:mb-12">Key Issues</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8" role="list">
                         {[
-                            {title: "Land Use & Development", description: "Bryant wants to ensure that future growth and building is done according to the land use plan. He wants future neighborhoods to be built that are easily accessible and have the necessary amenities for families."},
-                            {title: "Representation", description: "Bryant believes that Gibsonville deserves to have a Board of Alderman that more closely represents all of its residents."},
-                            {title: "Senior Services", description: "Bryant will work with other board members to make sure outreach and engagement with seniors and the indigent are a priority to combat major issues such as transportation and food insecurity."},
-                            {title: "Economic Growth", description: "Bryant will work to make sure that Gibsonville grows in a responsible manner that will work for all residents. This includes beautifying Gibsonville with better roads and amenities in order to attract new businesses."},                       
+                            {title: "Downtown Development & Economic Growth", description: "Bryant wants to continue to drive more businesses to Gibsonville to help ensure a strong commercial tax base. This will also provide many options for our residents to utilize."},
+                            {title: "Amenities", description: "Bryant wants to make sure that our parks, our downtown parking, and our roads reflect the level of excellence expected in Gibsonville."},
+                            {title: "Walkability", description: "Bryant wants to make sure that there are plenty sidewalks, multi-use paths, and safe traveling lanes so that everyone can enjoy Gibsonville and be safe doing so."},
+                            {title: "Completion of Capital Projects", description: "Bryant wants to make sure that capital projects such as the police station, library, Eugene Street project, and bringing a grocery store to Gibsonville are completed in a timely manner and done in a fiscally responsible manner"},                       
                         ].map((issue, i) => (
                             <article key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow" role="listitem">
                                 <h3 className="text-lg sm:text-xl font-traditional font-semibold mb-3">{issue.title}</h3>
