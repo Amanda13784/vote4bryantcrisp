@@ -66,14 +66,14 @@ export default function Home() {
             <section id="facebook-feed" className="py-12 sm:py-16 md:py-20 bg-white text-gray-800" aria-labelledby="facebook-feed-heading">
                 <div className="container mx-auto px-4">
                     <h2 id="facebook-feed-heading" className="text-2xl sm:text-3xl font-traditional font-semibold text-center mb-8">Campaign Facebook Feed</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-start">
-                        {/* Facebook Feed Left */}
-                        <div className="flex justify-center md:justify-start">
-                            <div className="w-full max-w-[500px]">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        {/* Facebook Feed Left - Made Bigger */}
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="w-full max-w-[600px]">
                                 <iframe
-                                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FBryant-Crisp-for-Gibsonville-Mayor-61578349430825%2F&tabs=timeline%2C%20events&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FBryant-Crisp-for-Gibsonville-Mayor-61578349430825%2F&tabs=timeline%2C%20events&width=600&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
                                     width="100%"
-                                    height="600"
+                                    height="700"
                                     style={{ border: 'none', overflow: 'hidden', display: 'block', width: '100%' }}
                                     scrolling="no"
                                     frameBorder="0"
@@ -84,7 +84,7 @@ export default function Home() {
                             </div>
                         </div>
                         {/* Right Side: Quote, Image, and CTA */}
-                        <div className="flex flex-col justify-center items-center text-center md:text-left md:items-start space-y-4 mt-8 md:mt-0">
+                        <div className="flex flex-col justify-center items-center text-center lg:text-left lg:items-start space-y-6 mt-8 lg:mt-0">
                             <blockquote className="font-political italic text-lg text-blue-900 border-l-4 border-blue-900 pl-4">
                                 "Stay connected with the campaign and see the latest updates, events, and community highlights on our Facebook page!"
                             </blockquote>
@@ -93,6 +93,7 @@ export default function Home() {
                                 alt="Campaign Sit down Logo"
                                 width={500}
                                 height={600}
+                                className="rounded-lg shadow-lg"
                             />
                             <a
                                 href="https://www.facebook.com/p/Bryant-Crisp-for-Gibsonville-Mayor-61578349430825/"
