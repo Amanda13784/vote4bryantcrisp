@@ -39,14 +39,15 @@ export default function About() {
                             <p className="mb-4">Bryant Crisp has been a steadfast advocate for community empowerment
                               through active leadership and service. As Vice President of Future Alamance
                               and a member of the Land Development Plan Committee for the Town of Gibsonville,
-                              he's helped shape policy and strategic planning for the area's growth.</p>
+                              he's helped shape policy and strategic planning for the area's growth. He is also a member of the BGMPO 
+                              (Burlington Graham Metropolitan Planning Organization), and he is a board member of
+                               ARCAP (Alamance Community Action Agency).</p>
                             <p className="mb-4">A proud member of the Alamance County branch of the NAACP, Bryant has also led civic 
                               initiatives like the "Souls to the Polls" event during the 2020 election to 
                               boost voter turnout. He has partnered with local organizations to host food 
                               drives, back-to-school events, and other community support programs.</p>
-                            <p>For over 13 years, Bryant has coached youth basketball and football, and for 
-                              15 years he has mentored young men—providing guidance, encouragement, and leadership 
-                              to the next generation.</p>
+                            <p>For many years, Bryant has coached youth football, basketball, and has mentored 
+                                young men - providing guidance, encouragement, and leadership to the next generation.</p>
                         </div>
                         <div className="relative">
                             <Image
@@ -72,15 +73,14 @@ export default function About() {
                                 <div className="text-6xl text-blue-900 opacity-20 absolute -top-4 -left-2">"</div>
                                 <div className="relative z-10">
                                     <p className="font-political text-lg sm:text-xl leading-relaxed text-gray-800 mb-6 italic">
-                                        "My why is simple. I was raised by my parents to help anyone who needed it 
-                                        and to be a leader. I've done that on a smaller scale, but to do it on a 
-                                        larger scale so that the help is permanent I feel holding public office is 
-                                        the way."
+                                        "My why is simple. I was raised by my parents to help anyone who needed it and to be a leader. 
+                                        In my 4 years on the Board of Alderman in Gibsonville, I have learned a lot, and I would 
+                                        like to use what I’ve learned to lead Gibsonville into the future as its’ Mayor."
                                     </p>
                                     <p className="font-political text-lg sm:text-xl leading-relaxed text-gray-800 mb-6 italic">
-                                        "Gibsonville is going through a shift like most cities and towns are 
-                                        and I want to help guide those changes. I want this great town to be accessible 
-                                        to and represent all of its' residents at the table."
+                                    “Gibsonville is changing like most towns and cities. I want to make sure it is accessible 
+                                    to and represents all of its residents.”
+
                                     </p>
                                     <div className="text-right">
                                         <cite className="font-traditional font-semibold text-blue-900 text-lg">— Bryant Crisp</cite>
@@ -90,13 +90,13 @@ export default function About() {
                         </div>
                         <div className="relative">
                             <Image
-                                src="/images/BCFiling.png"
-                                alt="Bryant Crisp filing for office"
+                                src="/images/BCSitdown.png"
+                                alt="Bryant Crisp talking with voters."
                                 width={500}
                                 height={400}
                                 className="rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                             />
-                            <p className="text-sm text-gray-600 mt-2 text-center italic">Bryant filing for office - Committed to public service</p>
+                            <p className="text-sm text-gray-600 mt-2 text-center italic">Bryant talking with members of the community.</p>
                         </div>
                     </div>
                 </div>
