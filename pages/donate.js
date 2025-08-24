@@ -36,7 +36,7 @@ export default function Donate() {
           {/* Replace the href below with Bryant's actual ActBlue donation link or embed code when ready */}
           <div className="flex justify-center">
             <a
-              href="#"
+              href="https://secure.actblue.com/donate/bryant-crisp-1"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-500 text-blue-900 font-semibold py-3 px-8 rounded-lg text-lg shadow-lg hover:bg-yellow-400 transition-colors"
