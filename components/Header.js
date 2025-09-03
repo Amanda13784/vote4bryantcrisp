@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function Header() {
     return (
@@ -11,6 +11,7 @@ export default function Header() {
                     <Link href="/" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Home</Link>
                     <Link href="/about" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">About</Link>
                     <Link href="/issues" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Issues</Link>
+                    <Link href="/early-voting" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Early Voting</Link>
                     <Link href="/contact" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Contact</Link>
                     <Link href="/donate" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Donate</Link>
                     <Link href="/volunteer" className="font-political px-2 sm:px-4 py-2 rounded hover:bg-blue-800 hover:text-yellow-400 transition-colors">Volunteer</Link>

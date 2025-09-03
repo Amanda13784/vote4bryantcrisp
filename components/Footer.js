@@ -10,7 +10,7 @@ export default function Footer() {
                     <p className="text-gray-300 text-sm">Building a stronger Gibsonville together</p>
                 </div>
                 <div className="border-t border-gray-700 mt-6 pt-6 text-center">
-                    <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Vote Bryant Crisp. All rights reserved.</p>
+                    <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Developer: Amanda Baker. Vote Bryant Crisp. All rights reserved.</p>
                 </div>
             </div>
         </footer>

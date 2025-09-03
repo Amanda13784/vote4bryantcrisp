@@ -35,9 +35,9 @@ export default function Issues() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8" role="list">
                         {[
                             {title: "Downtown Development & Economic Growth", description: "Bryant wants to continue to drive more businesses to Gibsonville to help ensure a strong commercial tax base. This will also provide many options for our residents to utilize."},
-                            {title: "Amenities", description: "Bryant wants to make sure that our parks, our downtown parking, and our roads reflect the level of excellence expected in Gibsonville."},
-                            {title: "Walkability", description: "Bryant wants to make sure that there are plenty sidewalks, multi-use paths, and safe traveling lanes so that everyone can enjoy Gibsonville and be safe doing so."},
-                            {title: "Completion of Capital Projects", description: "Bryant wants to make sure that capital projects such as the police station, library, Eugene Street project, and bringing a grocery store to Gibsonville are completed in a timely manner and done in a fiscally responsible manner"},                       
+                            {title: "Amenities", description: "Bryant wants to make sure that our parks, our downtown parking, and our roads reflect the level of excellence expected in Gibsonville. Bryant wants to make sure that there are plenty sidewalks, multi-use paths, and safe traveling lanes so that everyone can enjoy Gibsonville and be safe doing so. "},
+                            {title: "Culture", description: "Bryant wants to help guide the Town of Gibsonville residents in learning more about its history, culture, and each other. He wants to make sure all Gibsonville residents feel heard."},
+                            {title: "Completion of Capital Projects", description: "Bryant wants to make sure that capital projects such as the police station, library, Eugene Street project, and bringing a grocery store to Gibsonville are making timely progress and completed in a fiscally responsible manner."},                       
                         ].map((issue, i) => (
                             <article key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow" role="listitem">
                                 <h3 className="text-lg sm:text-xl font-traditional font-semibold mb-3">{issue.title}</h3>
